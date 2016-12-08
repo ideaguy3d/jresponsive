@@ -1,0 +1,12 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header, footer {
+    /*
+     *  */
+    background-color: #333;
+    color: #dddddd;
+    padding: 20px;
+    text-align: center;
+}
