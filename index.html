@@ -8,12 +8,11 @@
     <title>Julius Alvarado</title>
 
     <!-- CSS Libraries -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Cardo:400,400italic,700' rel='stylesheet' type='text/css'>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/app-julius.css">
@@ -21,39 +20,191 @@
 
 <body>
 
-<!-- header -->
-<header class="container-fluid">
-    <h1>Header</h1>
+<!-- header navigation -->
+<header id="home">
+    <nav class="navbar navbar-default navbar-fixed-top cbp-af-header" role="navigation">
+        <div class="container-fluid">
+            <!-- group the toggle and brand for better mobile display -->
+            <div class="navbar-header">
+                <!-- button that'll appear when screen gets width gets small -->
+                <button type="button" class="navbar-toggle collapsed"
+                        data-toggle="collapse" data-target="#nav-collapse-1">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#top">
+                    <img src="img/svg/node.svg" alt="logo">
+                </a>
+            </div>
+
+            <!-- collect the links, forms, and other content for toggling. -->
+            <div class="collapse navbar-collapse" id="nav-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Work</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </header>
 
-<!-- main content -->
+<div class="container-fluid">
+    <!-- landing section -->
+    <section class="row title-row">
+        <div class="fill-screen" style="background-image: url(./img/cup-coffee-md.jpg)">
+            <img src="img/svg/node.svg" alt="node developer" class="img-responsive title-image">
+            <div class="down-button">
+                <a href="#about" class="btn"><i class="fa fa-chevron-circle-down fa-5x"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- brief about section -->
+    <section id="about" class="row text-banner">
+        <h1>Hi! <i class="fa fa-smile-o"></i> I'm Julius Alvarado.</h1>
+        <p>Looking to hire someone to build a beautiful website or web app? Look no further, you found me. I'm a
+            Designer & Full Stack Developer that specializes in coding breathe taking user interfaces, awesome
+            experiences for end users, and RESTful API's to CRUD data from.</p>
+    </section>
+
+    <!-- this bg img area section sort of just parallax's by -->
+    <section id="skills" class="row">
+        <div class="fill-screen fixed-attachment center-block" style="background-image: url(./img/stun-comp-bg1.jpeg);">
+            <h1 class="center-text">Conceive it. Design it. Code it.</h1>
+            <blockquote class="text-banner">
+                <h1> <i class="fa fa-code"></i> It's all just talk till the code runs <i class="fa fa-code"></i> </h1>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- brief pitch section -->
+    <section id="pitch" class="row text-banner">
+        <h1>Hi! <i class="fa fa-smile-o"></i> I'm Julius Alvarado.</h1>
+        <p>Looking to hire someone to build a beautiful website or web app? Look no further, you found me. I'm a
+            Designer & Full Stack Developer that specializes in coding breathe taking user interfaces, awesome
+            experiences for end users, and RESTful API's to CRUD data from.</p>
+    </section>
+
+    <!-- the bootstrap carousal section -->
+    <section class="row">
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+            <!-- zIndicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- zSlides -->
+            <div class="carousel-inner">
+                <!-- slide 1 -->
+                <div class="item active">
+                    <img src="img/comps-md.jpg" alt="Scale Mountain">
+                    <div class="carousel-caption">
+                        <h3><a href="http://www.julius3d.com">JavaScript Coding</a></h3>
+                        <p>I use Angular, React, Vanilla, jQuery, Mongoose, and Node JavaScript to build websites and apps.</p>
+                    </div>
+                </div>
+                <!-- slide 2 -->
+                <div class="item">
+                    <div class="item active">
+                        <img src="img/comps-md.jpg" alt="Scale Mountain">
+                        <div class="carousel-caption">
+                            <h3><a href="http://www.julius3d.com">JavaScript Coding</a></h3>
+                            <p>I use Angular, React, Vanilla, jQuery, Mongoose, and Node JavaScript to build websites and apps.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- slide 3 -->
+                <div class="item">
+                    <div class="item active">
+                        <img src="img/comps-md.jpg" alt="Scale Mountain">
+                        <div class="carousel-caption">
+                            <h3><a href="http://www.julius3d.com">JavaScript Coding</a></h3>
+                            <p>I use Angular, React, Vanilla, jQuery, Mongoose, and Node JavaScript to build websites and apps.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- 3 column section -->
 <div class="container-fluid">
     <div class="row">
         <aside class="col-sm-2">
             <h4 class="range-title">
                 <b>UI / UX Developer</b>
             </h4>
+            <div class="range-list">
+                <a href="#">
+                    <img src="./img/svg/design1.svg" alt="svg" width="100%">
+                    <h4>Designs</h4>
+                </a>
+                <a href="#">
+                    <img src="./img/svg/design1.svg" alt="svg" width="100%">
+                    <h4>Designs</h4>
+                </a>
+                <a href="#">
+                    <img src="./img/svg/design1.svg" alt="svg" width="100%">
+                    <h4>Designs</h4>
+                </a>
+            </div>
         </aside>
-        <section class="col-sm-8">middle section</section>
-        <aside class="col-sm-2">right aside</aside>
+        <section class="col-sm-8">
+            <a href="#">
+                <img src="./img/svg/design1.svg" alt="svg" width="100%">
+                <h4>Designs</h4>
+            </a>
+            <a href="#">
+                <img src="./img/svg/design1.svg" alt="svg" width="100%">
+                <h4>Designs</h4>
+            </a>
+            <a href="#">
+                <img src="./img/svg/design1.svg" alt="svg" width="100%">
+                <h4>Designs</h4>
+            </a>
+        </section>
+        <aside class="col-sm-2">
+            <a href="#">
+                <img src="./img/svg/design1.svg" alt="svg" width="100%">
+                <h4>Designs</h4>
+            </a>
+            <a href="#">
+                <img src="./img/svg/design1.svg" alt="svg" width="100%">
+                <h4>Designs</h4>
+            </a>
+            <a href="#">
+                <img src="./img/svg/design1.svg" alt="svg" width="100%">
+                <h4>Designs</h4>
+            </a>
+        </aside>
     </div>
 </div>
 
 <!-- footer -->
 <footer class="container-fluid">
     <h1>Footer</h1>
-    <h1>The lazy brown fox jumped over the dog.</h1>
+    <h1>The lazy brown fox jumped over the sleeping dog.</h1>
 </footer>
 
 <!-------------------------->
 <!-- JavaScript Libraries -->
 <!-------------------------->
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
 <!----------------------->
 <!-- Custom JavaScript -->
 <!----------------------->
+<script src="js/app-julius.js"></script>
 
 </body>
 </html>

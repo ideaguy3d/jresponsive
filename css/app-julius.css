@@ -1,12 +1,120 @@
+/*
+ * Julius Alvarado
+  www.julius3d.com */
+
 body {
     font-family: 'Montserrat', sans-serif;
+    position: relative;
 }
 
-header, footer {
-    /*
-     *  */
-    background-color: #333;
-    color: #dddddd;
+.navbar {
+    padding: 28px 14px;
+    margin-bottom: 0;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+@media (max-width: 400px) {
+    .navbar-header {
+        position: relative;
+    }
+
+    .navbar img {
+        position: absolute;
+        top:0;
+        bottom:0;
+        margin:auto;
+        width:70%;
+    }
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #434343;
+}
+
+.cbp-af-header-shrink {
+    padding: 4px 0;
+    opacity: 0.8;
+}
+
+.fill-screen {
+    -webkit-background-size: cover;
+    background-size:cover;
+    background-position: center;
+}
+
+.title-row {
+    position: relative;
+    min-height: 300px;
+}
+
+/*
+ * This is the landing section image,
+   the pivot point is the top-left corner of the image */
+.title-image {
+    position: absolute;
     padding: 20px;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.down-button {
+    position: absolute;
+    bottom:40px;
+    width:100%;
     text-align: center;
 }
+
+.down-button i {
+    color: #ffffff;
+}
+
+.fixed-attachment {
+    background-attachment: fixed;
+}
+
+/*
+ * on smaller screen have bg scroll instead of parallax */
+@media (max-width: 992px) {
+    .fixed-attachment {
+        background-attachment: scroll;
+    }
+}
+
+.text-banner {
+    text-align: center;
+    margin: 46px 22px;
+}
+
+.text-banner h1 {
+    font-size: 48px;
+}
+
+.text-banner p {
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+.center-text {
+    top:50%;
+    text-align: center;
+    color: whitesmoke;
+    padding: 10%;
+}
+
+/*
+ * END OF css file */
