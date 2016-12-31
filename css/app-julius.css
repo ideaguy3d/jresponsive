@@ -7,6 +7,82 @@ body {
     position: relative;
 }
 
+html, body {
+    height: 100%;
+}
+
+.jsection {
+    padding: 40px 0;
+}
+
+.jsection-b {
+    padding: 40px 0 0 0;
+}
+
+h1, h2, h3 {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+@media (min-width: 468px) {
+    h1 {
+        font-size: 60px;
+    }
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+#about ul li {
+    font-size: 20px;
+    list-style: none;
+    margin: 8px 0;
+}
+
+#about .jabout-ls {
+    padding-top: 30px;
+}
+
+.jservices-content {
+    padding: 20px;
+}
+
+.jumbotron {
+    background-color: #353536;
+    margin-bottom: 0;
+}
+
+.jservices-content * {
+    margin: 20px;
+}
+
+.jh1-bold {
+    font-weight: 900;
+}
+
+.jp-light {
+    font-weight: 300;
+}
+
+/*
+ * for background video */
+header  {
+    display: block;
+    position: relative;
+    width:auto;
+    height: auto;
+    padding: 100px 0;
+    min-height: 100%;
+    background: no-repeat center center;
+    background-attachment: scroll;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-color: #222;
+}
+
 .navbar {
     padding: 28px 14px;
     margin-bottom: 0;
@@ -31,13 +107,32 @@ body {
     }
 }
 
+.work-header {
+    background-color: #353536;
+    padding: 20px 0;
+}
+
+.work-text {
+    text-align: center;
+    color: whitesmoke;
+}
+
+.navbar-default {
+    background-color: rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255, 0);
+}
+
 .navbar-default .navbar-nav>li>a {
     color: #434343;
+    font-weight: 800;
+    font-size: 18px;
 }
 
 .cbp-af-header-shrink {
     padding: 4px 0;
     opacity: 0.8;
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
 }
 
 .fill-screen {
@@ -65,6 +160,14 @@ body {
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    width: 25%;
+}
+
+@media (max-width: 767px) {
+    .title-image {
+        width: 250px;
+        height:auto;
+    }
 }
 
 .down-button {
@@ -99,22 +202,105 @@ body {
     font-size: 48px;
 }
 
-.text-banner p {
-    font-size: 20px;
+.text-banner h1.jwhite{
+    color: whitesmoke;
+    font-size: 64px;
+    font-weight: 800;
 }
 
+.text-banner h1.jabout {
+    font-size: 64px;
+}
 
+.text-banner p {
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 0;
+}
 
+.process-section {
+    margin: 56px;
+}
 
+.process-element {
+    text-align: center;
+}
 
+.process-element img {
+    width: 190px;
+    height: 150px;
+}
 
+#carousel {
+    margin: 40px 0;
+}
 
+#carousel img {
+    width: 100%;
+    height: auto;
+}
+
+.contact-me {
+    padding-top: 10%;
+}
+
+.contact-row {
+    margin-top: 30px;
+}
+
+form .row:first-child .floating-label-form-group {
+    border-top: 1px solid #cfcfcf;
+}
+
+.floating-label-form-group {
+    position: relative;
+    margin-bottom: 0;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.floating-label-form-group label {
+    display: block;
+    z-index: 0;
+    position: relative;
+    top: 2em;
+    margin: 0;
+    font-size: 0.86em;
+    line-height: 1.7em;
+    vertical-align: baseline;
+    opacity: 0;
+    transition: top 0.5s ease, opacity 0.5s ease;
+}
+
+.floating-label-form-group input,
+.floating-label-form-group textarea {
+    z-index: 1;
+    position: relative;
+    padding-right: 0;
+    padding-left: 0;
+    border: none;
+    font-size: 1.5em;
+    background: none;
+    box-shadow: none !important;
+    resize: none;
+}
 .center-text {
     top:50%;
     text-align: center;
     color: whitesmoke;
     padding: 10%;
+    font-size: 48px;
+    font-weight: 800;
 }
+
+.contact-section {
+    padding: 80px 0;
+}
+
+.headline {
+    color: whitesmoke;
+}
+
 
 /*
  * END OF css file */
