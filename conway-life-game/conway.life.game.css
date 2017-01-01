@@ -8,9 +8,15 @@ html, body {
     border-collapse: collapse;
 }
 
-td {
+#jgrid td {
     /*padding: 0 8px;*/
     border: 1px solid #434b63;
+}
+
+@keyframes birth {
+    50% {
+        box-shadow: 0 0 0 99px green inset;
+    }
 }
 
 #jgrid input[type="checkbox"] {
@@ -22,17 +28,43 @@ td {
     height: 20px;
     border: 0;
     margin: 0;
+    transition: all 0.5s;
 }
 
 #jgrid input[type="checkbox"]:checked {
-    background: #697088;
-    box-shadow: 0 0 0 99px #697088 inset;
+    box-shadow: 0 0 0 99px #3c3c3c inset;
+    animation: birth 500ms;
 }
 
-.btn:active {
-    box-shadow: 0 0.05em .1em rgba(0,0,0,0.5) inset;
+button, .jbutton {
+    outline: none;
+    padding: .3em .5em;
+    background: linear-gradient(hsla(0,0%,100%,.3), hsla(0,0%,100%, 0)) deepskyblue;
+    font-weight: 800;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 0 hsla(0, 0%, 80%, .6) inset,
+        0 .2em .2em -0.1em rgba(0, 0, 0, 0.5);
+    color: white;
+    text-shadow: 0 -.1em .1em rgba(0,0,0,0.5);
 }
 
+button:enabled:active, .jbutton:active,
+input[type="checkbox"]:checked + label.jbutton {
+    background-image: none;
+    box-shadow: 0 0.05em .1em rgba(0, 0, 0, 0.7) inset;
+    outline: none;
+    border: 0 none;
+}
+
+button:disabled {
+    background-color: hsl(80, 20%, 35%);
+    cursor: not-allowed;
+}
+
+#autoplay {
+    position: absolute;
+    clip: rect(0,0,0,0);
+}
 
 
 /*

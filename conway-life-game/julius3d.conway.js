@@ -169,7 +169,6 @@ function j(selector, container) {
                             if (y < zgrid.size-1) {
                                 zgrid.checkboxes[y + 1][x].focus();
                             }
-
                             break;
                     }
                 }
@@ -207,14 +206,14 @@ function j(selector, container) {
             if (this.autoplay) {
                 this.timer = setTimeout(function () {
                     znext.next();
-                }, 700)
+                }, 1000)
             }
         }
     }
 
 })(); // END OF: conwayLifeGameUI class / closure; ^_^
 
-var gameInteface = new conwayLifeGameUI(document.getElementById('jgrid'), 12);
+var gameUI = new conwayLifeGameUI(document.getElementById('jgrid'), 12);
 
 
 // mini game controller class / closure
@@ -226,16 +225,17 @@ var gameInteface = new conwayLifeGameUI(document.getElementById('jgrid'), 12);
     };
 
     zbuttons.next.addEventListener('click', function (event) {
-        gameInteface.next();
+        gameUI.next();
     });
 
     j('#autoplay').addEventListener('change', function () {
-        zbuttons.next.textContent = this.checked ? 'Start' : 'Next';
+        zbuttons.next.disabled = this.checked;
 
-        gameInteface.autoplay = this.checked;
-
-        if (!this.checked) {
-            clearTimeout(gameInteface.timer);
+        if (this.checked) {
+            gameUI.autoplay = this.checked;
+            gameUI.next();
+        } else {
+            clearTimeout(gameUI.timer);
         }
     });
 }()); // END OF: mini game controller class / closure; ^_^
