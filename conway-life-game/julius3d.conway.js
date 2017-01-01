@@ -124,6 +124,7 @@ function j(selector, container) {
                     var checkbox = document.createElement('input');
                     checkbox.type = 'checkbox';
                     this.checkboxes[y][x] = checkbox;
+                    checkbox.coords = [y, x];
 
                     cell.appendChild(checkbox);
                     row.appendChild(cell);
@@ -138,8 +139,45 @@ function j(selector, container) {
                 }
             });
 
+            this.grid.addEventListener('keyup', function (event) {
+                var checkbox = event.target;
+                if (checkbox.nodeName.toLowerCase() === 'input') {
+                    var coords = checkbox.coords;
+                    var y = coords[0];
+                    var x = coords[1];
+
+                    // console.log(event.keyCode);
+                    switch (event.keyCode) {
+                        case 37: // left
+                            // make sure it stops at left edge
+                            if (x > 0) {
+                                zgrid.checkboxes[y][x - 1].focus();
+                            }
+                            break;
+                        case 38: // up
+                            if (y > 0) {
+                                zgrid.checkboxes[y - 1][x].focus();
+                            }
+                            break;
+                        case 39: // right
+                            // make sure it stops at right edge.
+                            if (x < zgrid.size) {
+                                zgrid.checkboxes[y][x + 1].focus();
+                            }
+                            break;
+                        case 40: // down
+                            if (y < zgrid.size-1) {
+                                zgrid.checkboxes[y + 1][x].focus();
+                            }
+
+                            break;
+                    }
+                }
+            });
+
             this.grid.appendChild(fragment);
         }, // END OF: createGrid function.
+
         get boardArray() {
             console.log("boardArray successfully called.");
             return this.checkboxes.map(function (rowElem) {
@@ -166,8 +204,8 @@ function j(selector, container) {
                 }
             }
 
-            if(this.autoplay) {
-                this.timer = setTimeout(function(){
+            if (this.autoplay) {
+                this.timer = setTimeout(function () {
                     znext.next();
                 }, 700)
             }
@@ -180,7 +218,7 @@ var gameInteface = new conwayLifeGameUI(document.getElementById('jgrid'), 12);
 
 
 // mini game controller class / closure
-(function(){
+(function () {
     "use strict";
 
     var zbuttons = {
@@ -191,7 +229,7 @@ var gameInteface = new conwayLifeGameUI(document.getElementById('jgrid'), 12);
         gameInteface.next();
     });
 
-    j('#autoplay').addEventListener('change', function(){
+    j('#autoplay').addEventListener('change', function () {
         zbuttons.next.textContent = this.checked ? 'Start' : 'Next';
 
         gameInteface.autoplay = this.checked;
