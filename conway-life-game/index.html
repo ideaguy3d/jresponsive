@@ -4,17 +4,32 @@
 	<meta charset="UTF-8">
 	<title>julius3d.com conway's game of life</title>
 	<link rel="icon" type="image/ico" href="laptop.ico">
+	
+	<link rel="stylesheet" href="libs/bootstrap.css">
 	<link rel="stylesheet" href="conway.life.game.css">
 </head>
 
 
 <body>
 
-<h1>Conway's game of life</h1>
-<h4>julius3.com</h4>
+<div class="container">
+	<h1 class="page-header">Conway's game of life <small>julius3d.com</small></h1>
+	
+	<section class="row">
+		<div class="col-xs-10 col-xs-1 col-sm-6 col-sm-offset-3">
+			<table id="jgrid" class="center-block"></table>
+			<br>
+			<button class="btn btn-warning j3dNext">Next</button>
+			<label for="autoplay">Auto Play</label>
+			<input type="checkbox" id="autoplay">
+		</div>
+	</section>
+</div>
+
+
 
 <!-- JavaScript files -->
-<script src="julius3d.conway.life.game.js"></script>
+<script src="julius3d.conway.js"></script>
 
 </body>
 </html>
