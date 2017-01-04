@@ -26,7 +26,7 @@ h1, h2, h3 {
 
 @media (min-width: 468px) {
     h1 {
-        font-size: 60px;
+        font-size: 80px;
     }
 }
 
@@ -44,6 +44,10 @@ p {
 
 #about .jabout-ls {
     padding-top: 30px;
+}
+
+.j-frame {
+    border: 2px solid #3c3c3c;
 }
 
 .jservices-content {
@@ -69,7 +73,7 @@ p {
 
 /*
  * for background video */
-header  {
+#vid-element.jvid-header  {
     display: block;
     position: relative;
     width:auto;
@@ -160,7 +164,11 @@ header  {
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    width: 25%;
+    width: 33%;
+}
+
+#about img {
+   box-shadow: 2px 2px 6px 2px rgba(0,0,0,0.5)
 }
 
 @media (max-width: 767px) {
@@ -204,8 +212,8 @@ header  {
 
 .text-banner h1.jwhite{
     color: whitesmoke;
-    font-size: 64px;
-    font-weight: 800;
+    font-size: 72px;
+    font-weight: 500;
 }
 
 .text-banner h1.jabout {
@@ -289,8 +297,17 @@ form .row:first-child .floating-label-form-group {
     text-align: center;
     color: whitesmoke;
     padding: 10%;
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.center-text-quote-section {
+    top:50%;
+    text-align: center;
+    color: whitesmoke;
+    padding: 10%;
     font-size: 48px;
-    font-weight: 800;
+    font-weight: 500;
 }
 
 .contact-section {
@@ -299,6 +316,10 @@ form .row:first-child .floating-label-form-group {
 
 .headline {
     color: whitesmoke;
+}
+
+#jfooter h1.footer-email {
+    font-size: 36px;
 }
 
 

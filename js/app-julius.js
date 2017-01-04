@@ -2,8 +2,8 @@
  * Created by Julius Alvarado on 12/10/2016.
  */
 
-jQuery(function(){
-    jQuery(window).on('load resize', function(){
+jQuery(function () {
+    jQuery(window).on('load resize', function () {
         jQuery('.fill-screen').css('height', window.innerHeight);
     });
 
@@ -12,21 +12,23 @@ jQuery(function(){
         offset: 160
     });
 
-    jQuery('nav a, .down-button a').bind('click', function(e){
+    jQuery('nav a, .down-button a').bind('click', function (e) {
         jQuery('html, body').stop().animate({
-            scrollTop: jQuery( jQuery(this).attr('href') ).offset().top - 100
+            scrollTop: jQuery(jQuery(this).attr('href')).offset().top - 100
         }, 1500, 'easeInOutExpo');
         e.preventDefault();
     });
 
     new WOW().init();
 
+    /* video wallpaper */
     jQuery('#vid-element').wallpaper({
         source: {
             poster: 'img/cup-coffee-md.jpg',
-            mp4: 'img/coding.mp4'
+            mp4: 'img/squares.mp4'
         }
     });
+
 
     // Form Handling Code
 
