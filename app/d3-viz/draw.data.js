@@ -74,7 +74,6 @@
             "fill": "whitesmoke",
             "font-weight": 'bold'
         });
-
 }());
 
 
