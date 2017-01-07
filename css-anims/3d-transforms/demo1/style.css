@@ -1,0 +1,133 @@
+body {
+    font-family: sans-serif;
+}
+
+section {
+    padding-left: 40px;
+}
+
+/* --------------------------------------- */
+/* ------- 3D transforms section -------  */
+/* --------------------------------------- */
+.box3d {
+    width: 220px;
+    height: 220px;
+    display: inline-block;
+    margin: 40px 40px;
+    border: 2px solid #333;
+    position: relative;
+    perspective: 600px;
+}
+
+.box3d div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*
+     * I have to set this since the parent element
+     has perspective */
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    /*
+     * Even though the initial state is a div, and the final
+      state is a .rotate3d:hover, it still works fine. */
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+.rotate3d {
+    background: hsla(240, 80%, 50%, 0.8);
+}
+
+.translate3d {
+    background: hsla(120, 70%, 50%, 0.6);
+}
+
+.scale3d {
+    background: hsla(360, 70%, 50%, 0.6);
+}
+
+.rotate3d:hover {
+    /*transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);*/
+    transform: rotate3d(1, 1, 1, 360deg);
+}
+
+.translate3d:hover {
+    box-shadow: 0 0 30px 4px #888888;
+    /*transform: translateX(10px) translateY(10px) translateZ(60px);*/
+    transform: translate3d(40px,40px,70px);
+}
+
+.scale3d:hover {
+    transform: scale3d(1.5,1.5,1.5);
+}
+
+/* ------------------------------------------------ */
+/* ------- Button Transforms & Transitions -------  */
+/* ------------------------------------------------ */
+.jbutton {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 9px #999;
+}
+
+.jbutton:hover {
+    background-color: #3e8e41
+}
+
+.jbutton:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.jbutton2 {
+    border-radius: 30px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.jbutton2 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.jbutton2 span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.jbutton2:hover span {
+    padding-right: 25px;
+}
+
+.jbutton2:hover span:after {
+    opacity: 1;
+    right: 0;
+}

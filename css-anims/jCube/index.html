@@ -1,0 +1,67 @@
+<!doctype html>	
+<html>
+<head>
+  <title>jCube</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+ 
+<h1>Rotating jCube</h1>
+
+<br>
+		<!-- Controls -->
+		<input type="radio" id="front" name="face" checked />
+		<label for="front">FRONT</label>
+		  
+		<input type="radio" id="left" name="face"/>
+		<label for="left">LEFT</label>
+
+		<input type="radio" id="right" name="face"/>
+		<label for="right">RIGHT</label> 
+
+		<input type="radio" id="top" name="face"/>
+		<label for="top">TOP</label> 
+
+		<input type="radio" id="bottom" name="face"/>
+		<label for="bottom">BOTTOM</label> 
+
+		<input type="radio" id="back" name="face"/>
+		<label for="back">BACK</label>
+		  
+		  <br><br>
+
+		<!-- Backface-visibility  -->
+		
+		<input type="radio" id="hidden" name="backface"/>
+		<label for="hidden">Backface Hidden</label>
+		 
+		
+		<input type="radio" id="visible" name="backface" checked />
+		<label for="visible">Backface Visible</label>
+   
+
+	
+	<div class="margin"></div>
+
+
+	<div class="view_3d">
+	            
+	    <div class="cube_3d">
+	      <div class="pane front"><figure>FRONT</figure></div>
+	      <div class="pane top"><figure>TOP</figure></div>
+	      <div class="pane bottom"><figure>BOTTOM</figure></div>
+	      <div class="pane left"><figure>LEFT</figure></div>
+	      <div class="pane right"><figure>RIGHT</figure></div>
+	      <div class="pane back"><figure>BACK</figure></div>
+	    </div>
+	    
+	</div><!-- view_3d -->
+ 
+
+
+
+
+</body>
+
+</html>

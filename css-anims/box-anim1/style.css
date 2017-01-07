@@ -1,0 +1,236 @@
+/*
+ * Julius Alvarado */
+
+
+/*
+ * Box Animations
+*/
+.top-container {
+    background: #0bc770;
+    min-height: 600px;
+    padding: 200px 0;
+}
+
+.jblock {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    background: #fff url(images/block.png) no-repeat 44px;
+    animation-name: jFadeIn;
+}
+
+.jblock-3dFlip {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    background: #fff url(images/block.png) no-repeat 44px;
+    animation-name: j3dFlip;
+}
+
+.jblock-3dFlip:hover {
+    animation-name: j3dFlip-out;
+}
+
+.j-animated {
+    animation-duration: 5s;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+    animation-delay: 2s;
+}
+
+.janim-3dFlip {
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+}
+
+@keyframes j3dFlip {
+    0% {
+        opacity: 0;
+        transform: perspective(400px) rotateX(90deg)
+    }
+
+    100% {
+        opacity: 100;
+        transform: perspective(400px) rotateX(-30deg);
+    }
+}
+
+@keyframes j3dFlip-out {
+    0% {
+        transform: perspective(400px) rotateX(-30deg);
+    }
+
+    100% {
+        transform: perspective(400px) rotateX(90deg);
+    }
+}
+
+@keyframes jFadeIn {
+    0% {
+        opacity: 0;
+        width: 100px;
+        height: 100px;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .5;
+        width: 200px;
+        height: 200px;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+}
+
+/*
+ * Ladybug Animation */
+#top-container-ladybug {
+    background-color: deepskyblue;
+    min-height: 500px;
+    padding: 150px 0;
+}
+
+#ladybug {
+    height: 205px;
+    width: 252px;
+    margin: 2% auto;
+    background: url(images/sprite.png) left center;
+    animation: play-ladybug 0.6s steps(12) infinite;
+}
+
+@keyframes play-ladybug {
+    0% {
+        background-position: -3024px;
+    }
+    100% {
+        background-position: 0;
+    }
+}
+
+/* ========================
+ * Gallery Image3D rules */
+.jcolumns {
+    perspective: 900000px;
+}
+
+#img3d-gallery-wrapper {
+    background: #333 url(images/bg.jpg) repeat-x fixed;
+    padding-left: 16px;
+    padding-top: 12px;
+}
+
+#img3d-gallery-wrapper h1,
+#img3d-gallery-wrapper h2 {
+    color: #f0f0f0;
+}
+
+a.img-click {
+    display: block;
+}
+
+.img-info {
+    position: absolute;
+    background-color: #333;
+    bottom: 0;
+    padding: 12px;
+    text-align: center;
+    visibility: hidden;
+}
+
+.img-click img {
+    opacity: 0.7;
+}
+
+.img-container {
+    width: 90%;
+}
+
+.img-container:hover {
+    animation-name: thumb-tilt;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    transition-timing-function: ease-in;
+}
+
+@keyframes thumb-tilt {
+    0% {
+        transform: perspective(400px) rotateY(10deg) scale(1);
+    }
+    20% {
+        transform: perspective(400px) rotateY(-15deg) scale(1.1);
+    }
+    100% {
+        transform: perspective(400px) rotateY(0deg) scale(1.2);
+        opacity: 1.0;
+    }
+}
+
+.img-container:hover .img-info {
+    animation-name: info-slide;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    transition-timing-function: ease-in;
+}
+
+
+@keyframes info-slide {
+    0% {
+        opacity: 0;
+        transform: translateX(2.4em);
+    }
+    100% {
+        opacity: 100;
+        transform: translateX(0);
+        visibility: visible;
+    }
+}
+
+.img-click img:hover {
+    animation-name: img-transparency;
+    animation-fill-mode: both;
+    animation-duration: 1s;
+    transition-timing-function: ease-in;
+}
+
+@keyframes img-transparency {
+    0% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 100;
+    }
+}
+
+@media only screen and (max-width: 64.064em) {
+    h2 {
+        font-size: 1em;
+    }
+
+    span {
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (max-width: 40.064em) {
+    .img-container {
+        width: 40%;
+        margin: 0 auto 40px auto;
+    }
+}
+
+
+
+
+/*
+ *  End of CSS file */
