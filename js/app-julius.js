@@ -5,6 +5,9 @@
 jQuery(function () {
     jQuery(window).on('load resize', function () {
         jQuery('.fill-screen').css('height', window.innerHeight);
+
+        // for half the window height, the elem will be at top of view
+        jQuery('.half-screen').css('height', (window.innerHeight/2) );
     });
 
     jQuery('body').scrollspy({
