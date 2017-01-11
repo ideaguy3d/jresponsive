@@ -12,12 +12,17 @@
 	<!-- CSS Libraries -->
 	<link rel="stylesheet" href="css/libs/bootstrap.css">
 	<link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="bower_components/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css">
+	<link href="bower_components/owl-carousel/owl.theme.css" rel="stylesheet" type="text/css">
+	<link href="bower_components/owl-carousel/owl.transitions.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="css/libs/animate.css">
 	<link rel="stylesheet" href="css/libs/nanogallery.min.css">
 	<link rel="stylesheet" href="css/libs/jquery.fs.wallpaper.css">
 	<!-- Fonts -->
-	<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,500,700,800,900' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,200,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,500,700,800,900' rel='stylesheet'
+	      type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,200,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic'
+	      rel='stylesheet' type='text/css'>
 	
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="css/app-julius.css">
@@ -54,8 +59,10 @@
 	
 	<!-- landing section -->
 	<section class="row title-row">
-		<div class="fill-screen" style="background-image: url(img/j3.png);">
-			<img src="img/j3d-logo-white.svg" alt="logos" class="img-responsive title-image title-image-vendor-prefixes">
+		<div class="fill-screen stellar-bg" style="background-image: url(img/j3.png);"
+		        data-stellar-background-ratio="0.5">
+			<img src="img/j3d-logo-white.svg" alt="logos"
+			     class="img-responsive title-image title-image-vendor-prefixes">
 			<div class="down-button">
 				<a href="#about" class="btn"><i class="fa fa-chevron-circle-down fa-4x"></i></a>
 			</div>
@@ -70,8 +77,54 @@
 			</div>
 		</div>
 	</section>
+</div> <!-- END OF: .container-fluid ^_^ -->
+
+<!-- owl Skills carousel  section -->
+<section class="skill-carousel wow bounce">
+	<div class="skill" style="background-image: url(img/j3.png);">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-2">
+					<div class="skill-details">
+						<span class="skill-name">JavaScript</span>
+						<span class="skill-description">OOP, Prototypical Inheritance, Functional Programming</span>
+						<a href="#jsModal" class="btn btn-primary btn-lg"><span>Break it down</span> <i class="fa fa-arrow-circle-right"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	
+	<div class="skill" style="background-image: url(img/cup-coffee-md.jpg);">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-2">
+					<div class="skill-details">
+						<span class="skill-name">AngularJS</span>
+						<span class="skill-description">OOP, Prototypical Inheritance, Functional Programming</span>
+						<a href="#jsModal" class="btn btn-primary btn-lg">Break it down <i class="fa fa-arrow-circle-right"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	
+	<div class="skill" style="background-image: url(img/j1.png);">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-2">
+					<div class="skill-details">
+						<span class="skill-name">CSS3 Animations</span>
+						<span class="skill-description">OOP, Prototypical Inheritance, Functional Programming</span>
+						<a href="#jsModal" class="btn btn-primary btn-lg">Break it down <i class="fa fa-arrow-circle-right"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<div class="container-fluid">
 	<!-- title-h1 content -->
 	<section class="row title-row">
 		<div class="fill-screen">
@@ -80,7 +133,62 @@
 			</div>
 		</div>
 	</section>
+	
+	<!-- the bootstrap carousal section -->
+	<section id="skills" class="row">
+		<div id="carousel" class="carousel slide" data-ride="carousel">
+			<!-- zIndicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#carousel" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel" data-slide-to="1"></li>
+				<li data-target="#carousel" data-slide-to="2"></li>
+			</ol>
+			
+			<!-- zSlides -->
+			<div class="carousel-inner">
+				<!-- slide 1 -->
+				<div class="item active">
+					<img src="img/comps-md.jpg" alt="work area">
+					<div class="carousel-caption">
+						<h3><a href="http://www.julius3d.com" target="_blank">1 - JavaScript Coding</a></h3>
+						<p>I use Angular, React, Vanilla, jQuery, Mongoose, and Node JavaScript to build websites and
+						   apps.</p>
+					</div>
+				</div>
+				<!-- slide 2 -->
+				<div class="item">
+					<img src="img/comps-md.jpg" alt="work area">
+					<div class="carousel-caption">
+						<h3><a href="http://www.julius3d.com">2 - JavaScript Coding</a></h3>
+						<p>I use Angular, React, Vanilla, jQuery, Mongoose, and Node JavaScript to build websites
+						   and apps.</p>
+					</div>
+				</div>
+				<!-- slide 3 -->
+				<div class="item">
+					<img src="img/comps-md.jpg" alt="work area">
+					<div class="carousel-caption">
+						<h3><a href="http://www.julius3d.com">3 - JavaScript Coding</a></h3>
+						<p>I use Angular, React, Vanilla, jQuery, Mongoose, and Node JavaScript to build websites
+						   and apps.</p>
+					</div>
+				</div>
+			</div>
+			
+			<!-- zArrows on left & right sides -->
+			<a href="#carousel" class="left carousel-control" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a href="#carousel" class="right carousel-control" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</section>
 </div>
+
+
 
 
 <!--------------------------------------->
@@ -93,7 +201,9 @@
 <script src="bower_components/jquery.easing.1.3.js"></script>
 <script src="bower_components/wow.min.js"></script>
 <script src="bower_components/jqBootstrapValidation.js"></script>
+<script src="bower_components/owl-carousel/owl.carousel.min.js"></script>
 <script src="js/jquery.fs.wallpaper.min.js"></script>
+<script src="bower_components/jquery.stellar.js"></script>
 
 
 <!----------------------->
